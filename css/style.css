@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+
+:root {
+    --ff-primary: "Mulish", sans-serif;
+    
+    --fs-12: 0.75rem;
+    --fs-14: 0.875rem;
+    --fs-16: 1rem;
+    --fs-18: 1.125rem;
+    
+    --fw-400: 400;
+    --fw-700: 700; 
+
+	--clr-light-beige: #f5e7da;
+    --clr-slate-blue: #545D7A;
+    --clr-orange: #F97316;
+	--clr-white: #ffffff;
+
+
+    --card-max-width: 323px;
+
+    --br-10: 0.625em; 
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	box-sizing: border-box;
+	background: var(--clr-light-beige);
+    font-weight: var(--fw-400);
+	font-family: var(--ff-primary);
+	min-height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ======= CARD ======= */
+.card {
+	background: var(--clr-white);
+    box-shadow: 0 7px 29px rgb(100, 100, 111, .2);
+    border-radius: var(--br-10);
+    max-width: var(--card-max-width);
+    margin: 0 auto;
+}
+
+.card__img {
+    display: block;
+    width: 100%;
+}
+
+.card__body {
+    padding: 1.56em 1.56em 1.9em;
+}
+
+.card__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625em;
+
+    margin-bottom: 2.38em;
+}
+
+.badge {
+    background: var(--clr-orange);
+    border-radius: 100px;
+    display: inline-block;
+    font-weight: var(--fw-400);
+}
+
+.primary-header {
+    color: var(--clr-white);
+    font-size: var(--fs-12);
+    text-transform: uppercase;
+    padding: 0.17em 0.83em;
+}
+
+.secondary-heading {
+    font-size: var(--fs-18);
+}
+
+.card_description {
+    font-size: var(--fs-16);
+}
+
+/* ============= PROFILE CARD =============  */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0.44em; 
+}
+
+.tertiary-heading {
+    font-size: var(--fs-16);
+}
+
+.profile__text {
+    color: var(--clr-slate-blue);
+    font-size: var(--fs-14);
+}
+
+@media (max-width: 320px) {
+    .card {
+        max-width: 280px;
+    }
+}
